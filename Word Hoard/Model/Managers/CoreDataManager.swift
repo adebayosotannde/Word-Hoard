@@ -138,7 +138,7 @@ class CoreDataManager
                    
                 }
             }
-            duplicateWordErrors(numnberOfDuplicate: numberOfDuplicateWords)
+           // duplicateWordErrors(numnberOfDuplicate: numberOfDuplicateWords)
            
         }
         else
@@ -210,6 +210,18 @@ class CoreDataManager
             print("Error Loading Context \(error)")
             return categoryArray
         }
+    }
+    
+    func reetriveCategoriefromString(categoryName: String)->Category?
+    {
+        for category in getAllCategories()
+        {
+            if category.name == categoryName
+            {
+                return category
+            }
+        }
+        return nil
     }
     
     func loadItems(with request: NSFetchRequest<Item> = Item.fetchRequest(), predicate: NSPredicate? = nil, selectedCategory: Category) -> [Item]

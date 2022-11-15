@@ -38,6 +38,7 @@
 		EEB532DE292407800072CB65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEB532D2292407800072CB65 /* Main.storyboard */; };
 		EEB532E0292407800072CB65 /* CustomView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEB532D5292407800072CB65 /* CustomView.storyboard */; };
 		EEB532E52924079E0072CB65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEB532E42924079E0072CB65 /* Assets.xcassets */; };
+		EEB532E7292410280072CB65 /* UserDefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB532E6292410280072CB65 /* UserDefaultManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +77,7 @@
 		EEB532D3292407800072CB65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EEB532D5292407800072CB65 /* CustomView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CustomView.storyboard; sourceTree = "<group>"; };
 		EEB532E42924079E0072CB65 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EEB532E6292410280072CB65 /* UserDefaultManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				EEB532A4292406EA0072CB65 /* CoreDataManager.swift */,
+				EEB532E6292410280072CB65 /* UserDefaultManager.swift */,
 				EEB532A5292406EA0072CB65 /* Internet Manager.swift */,
 			);
 			path = Managers;
@@ -437,6 +440,7 @@
 			files = (
 				EEB53293292405790072CB65 /* String Keys.swift in Sources */,
 				EEB53282292403D20072CB65 /* Word_Hoard.xcdatamodeld in Sources */,
+				EEB532E7292410280072CB65 /* UserDefaultManager.swift in Sources */,
 				EEB532C6292407690072CB65 /* Add Collection.swift in Sources */,
 				EEB532C7292407690072CB65 /* Sub Category.swift in Sources */,
 				EEB532C4292407680072CB65 /* Categories.swift in Sources */,

@@ -19,9 +19,37 @@ class AddWordViewControler: UIViewController
     @IBOutlet weak var OkButton: UIButton!
     @IBOutlet weak var textFiled: UITextField!
     
+    @IBOutlet weak var userInputSwitch: UISwitch!
     @IBAction func okButtonPressed(_ sender: Any)
     {
-        validateData()
+        
+        
+        initiateAddWordSequence()
+       
+    }
+    
+    func initiateAddWordSequence()
+    {
+        if isValidInput()
+        {
+            print("Valid input")
+            
+            if userInputSwitch.isOn
+            {
+                print("User wants to provide thier own word")
+            }
+            else
+            {
+                if let wordfromTextfiled = textFiled.text
+                {
+                    createnewWordEntry(wordName: wordfromTextfiled)
+                }
+            }
+        }
+        else
+        {
+            print("invalid input")
+        }
     }
     
     override func viewDidLoad()
@@ -100,7 +128,7 @@ extension AddWordViewControler: UITextViewDelegate
 {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool
     {
-        validateData()
+        initiateAddWordSequence()
         return true
     }
 }
@@ -108,33 +136,36 @@ extension AddWordViewControler: UITextViewDelegate
 //MARK: - Data entry and validation
 extension AddWordViewControler
 {
-    private func validateData()
+    private func isValidInput()->Bool
     {
         if let wordfromTextfiled = textFiled.text
         {
             
-            if wordfromTextfiled.count != 0 && wordfromTextfiled.count < 31
-            {
-                createnewWordEntry(wordName: wordfromTextfiled)
-                dismissView()
-                return
-            }
+            
             if wordfromTextfiled.count == 0
             {
                 showZeroCountBanner()
                 dismissView()
-                return
+                return false
                 
             }
             if wordfromTextfiled.count > 20
             {
                 showErrorBanner()
                 dismissView()
-                return
+                return false
                 
             }
+            
+            
+            if wordfromTextfiled.count != 0 && wordfromTextfiled.count < 31
+            {
+                createnewWordEntry(wordName: wordfromTextfiled)
+                dismissView()
+                return true
+            }
         }
-        
+        return false
     }
     
     private func createnewWordEntry(wordName: String)

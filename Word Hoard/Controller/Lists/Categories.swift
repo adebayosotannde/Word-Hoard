@@ -14,6 +14,11 @@ class CollectionViewController: UIViewController
     }
     
    
+    @IBAction func dismissViewButton(_ sender: Any)
+    {
+       
+        self.dismiss(animated: true)
+    }
     
     override func viewDidLoad()
     {
@@ -58,7 +63,7 @@ extension CollectionViewController: UITableViewDelegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let wordlistvc = storyBoard.instantiateViewController(withIdentifier: "WordListViewControler") as! WordsViewControler
+        let wordlistvc = storyBoard.instantiateViewController(withIdentifier: "WordsViewControler") as! WordsViewControler
         wordlistvc.selectedCategory = categories[indexPath.row]
         wordlistvc.modalPresentationStyle = .popover
         navigationController?.pushViewController(wordlistvc, animated: true)

@@ -24,11 +24,33 @@ class CategorieTableViewCell: UITableViewCell
     
     public func configure(with item: Category)
     {
-        name.text = item.name
-        if let countValue = item.items?.count
+       
+        
+        if let categoryName = item.name
         {
-            count.text = "\(countValue) words"
+            //Set name
+            name.text = categoryName
+            
+            if let category = CoreDataManager.sharedManager.reetriveCategoriefromString(categoryName: categoryName)
+            {
+                let allWords = CoreDataManager.sharedManager.loadItems(selectedCategory: category)
+                let count = allWords.count
+                self.count.text = "\(count) words"
+            }
+         
+            
+        }else
+        {
+            name.text = "ERROR"
+            name.textColor = .red
+            self.count.text = "ERROR"
+            self.count.textColor = .red
+            
         }
+      
+       
+    
+       
     }
 
 }

@@ -21,9 +21,6 @@ class HomeViewController: UIViewController
         setupFeed()
         registerNotificationCenter()
         
-        //
-       
-        let array = CoreDataManager.sharedManager.retriveAllItems()
         
 
         
@@ -51,30 +48,35 @@ class HomeViewController: UIViewController
         {
             //Refrence to the User default.
             let defaults = UserDefaults.standard
-            let catergryName = defaults.string(forKey: userDefaultString.selectedCategoryToDisplay)
+            let catergryName = defaults.string(forKey: UserDefualtManager.selectedCategoryToDisplay)
             
          
-            //Loop through all categories and find the category with the caregorie name from user defaules
-            for category in CoreDataManager.sharedManager.getAllCategories()
+            if let retrivedCategory = CoreDataManager.sharedManager.reetriveCategoriefromString(categoryName: catergryName!)
             {
-                if category.name == catergryName
+                itemList = CoreDataManager.sharedManager.loadItems(selectedCategory: retrivedCategory).shuffled()
+                
+                if itemList.count == 0
                 {
-
-                    //Category has been found
-                    itemList = CoreDataManager.sharedManager.loadItems(selectedCategory: category).shuffled()
+                    print("There are zero items in the this categorie")
+                }else
+                {
                     tableView.setContentOffset(.zero, animated: true) //Scroll to the top of the table view.
                     tableView.reloadData()
-                   return 
+                   return
                 }
-            }
-
+             
+            }else
+                
+            {
+                print("Categorie was not found in user default")
+                #warning("Dont forget to switch up the defulat list given to the user. if no list is seelected")
+                }
+            
+            
             
 
         }
         
-        //Category was not found in the user defaults. Table view will handle the
-        print("Categorie was not found in user default")
-        #warning("Dont forget to switch up the defulat list given to the user. if no list is seelected")
       
        
     }

@@ -47,10 +47,9 @@ struct NotificationString
     //Managed by the Home VC
     static let updateMainUIList = "com.Learner.updateMainUIList"
 }
-
 struct userDefaultString
 {
-    static let selectedCategoryToDisplay = "selectedCategory"
+ 
 }
 
 struct TableViewCellValues
@@ -98,7 +97,7 @@ struct DummyData
         WordAlternative(name: "kettle", type: .noun, defineition: "a metallic vessel usually used for boiling liquids", example: "Look for pumpkin painting; snacks including kettle corn, apples and hot apple cider; and four bluegrass bands, including the Kentucky Warblers and Danny Paisley and the Southern Grass.")
     
     
-    ]
+    ].shuffled()
     
     
     

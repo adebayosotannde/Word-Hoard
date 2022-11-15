@@ -11,7 +11,7 @@ import Lottie
 
 class WordsViewControler: UIViewController
 {
-    static let identifier = "WordListViewControler"
+    static let identifier = "WordsViewControler"
     var itemArray = [Item]()
     
     var selectedCategory : Category?

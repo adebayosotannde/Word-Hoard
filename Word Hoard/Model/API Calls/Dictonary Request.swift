@@ -30,7 +30,7 @@ class DictionaryRequest
         {
             print("Dictionary: Error Parsing Data")
             
-            oppsError()
+            
             return
         }
         
@@ -54,7 +54,7 @@ class DictionaryRequest
                 guard (try? JSONDecoder().decode([Word].self, from: dataString.data(using: .utf8)!)) != nil else
                 {
                     print("Failed. Cannot find word in the default dictionary!     \(wordToDefine)")
-                    oppsError()
+    
                     return
                 }
                 let blogPosts: [Word] = try! JSONDecoder().decode([Word].self, from: data)
@@ -121,24 +121,13 @@ class DictionaryRequest
 extension DictionaryRequest
 {
   
-    func oppsError()
-    {
-        
-        DispatchQueue.main.sync
-        {
-            let banner = FloatingNotificationBanner(title: "Opps 🫣", subtitle: "Thats not a word!!!", style: .danger)
-            banner.show(queuePosition: .front, bannerPosition: .top, cornerRadius: 15)
-        }
-        
-        
-    }
     
     @MainActor
     func somethingwierdhappend()
     {
         DispatchQueue.main.sync
         {
-            let banner = FloatingNotificationBanner(title: "Fatal Error", subtitle: "Something really really strange happend. Try again or contact support with this word so we can investigate. Thank you for making the app greatt!", style: .danger)
+            let banner = FloatingNotificationBanner(title: "Fatal Error", subtitle: "Something really really strange happend.", style: .danger)
             banner.show(queuePosition: .front, bannerPosition: .top, cornerRadius: 15)
         }
     }
