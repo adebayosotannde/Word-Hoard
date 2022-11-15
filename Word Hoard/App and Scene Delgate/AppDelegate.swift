@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreData
+import Siren
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,9 +16,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        setupSirenUpdates()//Siren Configuration
         return true
     }
 
+    func setupSirenUpdates()
+    {
+        //MARK: - Siren
+        Siren.shared.wail() //Siren import statement.
+        //Update Message Presented to User.
+        Siren.shared.presentationManager = PresentationManager(alertTintColor: .systemBlue, appName: SirenString.appname, alertTitle: SirenString.alertTitle, alertMessage: SirenString.alertMessage, updateButtonTitle: "Update", nextTimeButtonTitle: "Not Now", skipButtonTitle: "Skip this Version", forceLanguageLocalization: .none)
+       
+        Siren.shared.rulesManager = RulesManager(globalRules: .critical, showAlertAfterCurrentVersionHasBeenReleasedForDays: 0) //Waits 0 days after update release to upgrade user.
+    }
+    
+    
     // MARK: UISceneSession Lifecycle
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
