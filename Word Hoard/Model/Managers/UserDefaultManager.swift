@@ -36,7 +36,7 @@ class UserDefualtManager
                 {
 
                     //Category has been found
-                    print(category.name)
+                   
                     wordList = CoreDataManager.sharedManager.loadItems(selectedCategory: category).shuffled()
                     
                     if wordList.count == 0

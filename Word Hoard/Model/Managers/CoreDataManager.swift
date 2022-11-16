@@ -166,7 +166,7 @@ class CoreDataManager
     }
     
     @discardableResult
-    private func wordAlreadyExistInCategory(name: String,selectedCategory: Category)->Bool
+     func wordAlreadyExistInCategory(name: String,selectedCategory: Category)->Bool
     {
         let allItems = loadItems(selectedCategory: selectedCategory)
         

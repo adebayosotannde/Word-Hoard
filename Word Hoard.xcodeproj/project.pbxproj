@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8149A51BB2F10C9608D81596 /* Pods_Word_Hoard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6533E349487749167AF6D6F2 /* Pods_Word_Hoard.framework */; };
+		EE690DD22924562000E8AD5A /* PurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE690DD12924562000E8AD5A /* PurchaseViewController.swift */; };
 		EEB53278292403D20072CB65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB53277292403D20072CB65 /* AppDelegate.swift */; };
 		EEB5327A292403D20072CB65 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB53279292403D20072CB65 /* SceneDelegate.swift */; };
 		EEB53282292403D20072CB65 /* Word_Hoard.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EEB53280292403D20072CB65 /* Word_Hoard.xcdatamodeld */; };
@@ -39,12 +40,18 @@
 		EEB532E0292407800072CB65 /* CustomView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEB532D5292407800072CB65 /* CustomView.storyboard */; };
 		EEB532E52924079E0072CB65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEB532E42924079E0072CB65 /* Assets.xcassets */; };
 		EEB532E7292410280072CB65 /* UserDefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB532E6292410280072CB65 /* UserDefaultManager.swift */; };
+		EEF951E3292551F50090B02C /* purchaseBackground2.json in Resources */ = {isa = PBXBuildFile; fileRef = EEF951E2292551F50090B02C /* purchaseBackground2.json */; };
+		EEF951E5292551FA0090B02C /* purchaseBackground1.json in Resources */ = {isa = PBXBuildFile; fileRef = EEF951E4292551FA0090B02C /* purchaseBackground1.json */; };
+		EEF951E92925548E0090B02C /* purchaseBackground3.json in Resources */ = {isa = PBXBuildFile; fileRef = EEF951E62925548E0090B02C /* purchaseBackground3.json */; };
+		EEF951EA2925548E0090B02C /* purchaseBackground4.json in Resources */ = {isa = PBXBuildFile; fileRef = EEF951E72925548E0090B02C /* purchaseBackground4.json */; };
+		EEF951EB2925548E0090B02C /* purchaseBackground5.json in Resources */ = {isa = PBXBuildFile; fileRef = EEF951E82925548E0090B02C /* purchaseBackground5.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6533E349487749167AF6D6F2 /* Pods_Word_Hoard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Word_Hoard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AAD2B43AEACDFB6BE4B35BE /* Pods-Word Hoard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Word Hoard.debug.xcconfig"; path = "Target Support Files/Pods-Word Hoard/Pods-Word Hoard.debug.xcconfig"; sourceTree = "<group>"; };
 		989B6CADF79D3DC3F88F79B8 /* Pods-Word Hoard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Word Hoard.release.xcconfig"; path = "Target Support Files/Pods-Word Hoard/Pods-Word Hoard.release.xcconfig"; sourceTree = "<group>"; };
+		EE690DD12924562000E8AD5A /* PurchaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseViewController.swift; sourceTree = "<group>"; };
 		EEB53274292403D20072CB65 /* Word Hoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Word Hoard.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEB53277292403D20072CB65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EEB53279292403D20072CB65 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +85,12 @@
 		EEB532D5292407800072CB65 /* CustomView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CustomView.storyboard; sourceTree = "<group>"; };
 		EEB532E42924079E0072CB65 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EEB532E6292410280072CB65 /* UserDefaultManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultManager.swift; sourceTree = "<group>"; };
+		EEF951E1292464B70090B02C /* Cinzel-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cinzel-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		EEF951E2292551F50090B02C /* purchaseBackground2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = purchaseBackground2.json; sourceTree = "<group>"; };
+		EEF951E4292551FA0090B02C /* purchaseBackground1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = purchaseBackground1.json; sourceTree = "<group>"; };
+		EEF951E62925548E0090B02C /* purchaseBackground3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = purchaseBackground3.json; sourceTree = "<group>"; };
+		EEF951E72925548E0090B02C /* purchaseBackground4.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = purchaseBackground4.json; sourceTree = "<group>"; };
+		EEF951E82925548E0090B02C /* purchaseBackground5.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = purchaseBackground5.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +143,7 @@
 		EEB53276292403D20072CB65 /* Word Hoard */ = {
 			isa = PBXGroup;
 			children = (
+				EE690DD12924562000E8AD5A /* PurchaseViewController.swift */,
 				EEB53291292405240072CB65 /* App and Scene Delgate */,
 				EEB5329A292406910072CB65 /* Fonts */,
 				EEB5329B292406D20072CB65 /* Lottie */,
@@ -171,6 +185,7 @@
 		EEB5329A292406910072CB65 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				EEF951E1292464B70090B02C /* Cinzel-VariableFont_wght.ttf */,
 				EEB53294292406830072CB65 /* Pacifico */,
 				EEB532972924068B0072CB65 /* Sriracha */,
 			);
@@ -182,6 +197,11 @@
 			children = (
 				EEB5329C292406D20072CB65 /* wisom.json */,
 				EEB5329D292406D20072CB65 /* brain.json */,
+				EEF951E2292551F50090B02C /* purchaseBackground2.json */,
+				EEF951E4292551FA0090B02C /* purchaseBackground1.json */,
+				EEF951E62925548E0090B02C /* purchaseBackground3.json */,
+				EEF951E72925548E0090B02C /* purchaseBackground4.json */,
+				EEF951E82925548E0090B02C /* purchaseBackground5.json */,
 			);
 			path = Lottie;
 			sourceTree = "<group>";
@@ -379,13 +399,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				EEB532DE292407800072CB65 /* Main.storyboard in Resources */,
+				EEF951E92925548E0090B02C /* purchaseBackground3.json in Resources */,
 				EEB53296292406830072CB65 /* Pacifico-Regular.ttf in Resources */,
+				EEF951E5292551FA0090B02C /* purchaseBackground1.json in Resources */,
 				EEB532E0292407800072CB65 /* CustomView.storyboard in Resources */,
 				EEB5329F292406D20072CB65 /* brain.json in Resources */,
 				EEB532DD292407800072CB65 /* LaunchScreen.storyboard in Resources */,
 				EEB532992924068B0072CB65 /* Sriracha-Regular.ttf in Resources */,
 				EEB532E52924079E0072CB65 /* Assets.xcassets in Resources */,
 				EEB5329E292406D20072CB65 /* wisom.json in Resources */,
+				EEF951E3292551F50090B02C /* purchaseBackground2.json in Resources */,
+				EEF951EA2925548E0090B02C /* purchaseBackground4.json in Resources */,
+				EEF951EB2925548E0090B02C /* purchaseBackground5.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,6 +480,7 @@
 				EEB532C1292407680072CB65 /* Home VC.swift in Sources */,
 				EEB532DB292407800072CB65 /* Words Review.swift in Sources */,
 				EEB532B0292406EA0072CB65 /* UI View Extension.swift in Sources */,
+				EE690DD22924562000E8AD5A /* PurchaseViewController.swift in Sources */,
 				EEB5327A292403D20072CB65 /* SceneDelegate.swift in Sources */,
 				EEB532AF292406EA0072CB65 /* Internet Manager.swift in Sources */,
 				EEB532AE292406EA0072CB65 /* CoreDataManager.swift in Sources */,

@@ -65,7 +65,7 @@ class DictionaryRequest
                 //Default Value
                 var word = wordToDefine
                 var partOfSpech = ""
-                var wordExample = "no example found"
+                var wordExample = ""
                 var wordDefenition = ""
                 
                 if let speech = blogPosts[0].meanings[0]?.partOfSpeech

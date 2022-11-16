@@ -13,18 +13,39 @@ class AddWordViewControler: UIViewController
 {
     static let identifier = "AddWordViewControler"
     
+   
     var selectedCategory : Category?
     
     @IBOutlet weak var dialogBoxView: UIView!
     @IBOutlet weak var OkButton: UIButton!
     @IBOutlet weak var textFiled: UITextField!
     
+    @IBOutlet weak var textEditField: UITextView!
+    
+    @IBOutlet weak var textFieldHeight: NSLayoutConstraint!
+    
+    
     @IBOutlet weak var userInputSwitch: UISwitch!
+    
+    @IBAction func switchButtoninitiated(_ sender: Any)
+    {
+        if userInputSwitch.isOn
+        {
+            textFieldHeight.constant = 200
+            textFiled.autocorrectionType = .no //disable corrections to allow for custom words to be used
+        }else
+        {
+            textFieldHeight.constant = 0
+            textFiled.autocorrectionType = .yes
+        }
+    }
+    
     @IBAction func okButtonPressed(_ sender: Any)
     {
         
         
         initiateAddWordSequence()
+        print("Done")
        
     }
     
@@ -36,10 +57,43 @@ class AddWordViewControler: UIViewController
             
             if userInputSwitch.isOn
             {
-                print("User wants to provide thier own word")
+                //validate text edit box for defenition
+                if isValidDefenition()
+                {
+                    
+                    
+                    if let word = textFiled.text
+                    {
+                        if let defentition = textEditField.text
+                        {
+                          
+                            print("Word \(word)")
+                            print("Defention \(defentition)")
+                            
+                            //Create a new word in the category
+                            
+                            if CoreDataManager.sharedManager.wordAlreadyExistInCategory(name: word, selectedCategory: selectedCategory!)
+                            {
+                                print("error this word already exists")
+                                showDuplicateBanner()
+                            }
+                            else
+                            {
+                                CoreDataManager.sharedManager.createWordEntry(word: word, partOfSpeech: "", wordExample: "", definition: defentition, category: selectedCategory!)
+                            }
+                            
+                        }
+                    }
+                    
+            
+                    
+                    
+                }
             }
             else
             {
+                
+               
                 if let wordfromTextfiled = textFiled.text
                 {
                     createnewWordEntry(wordName: wordfromTextfiled)
@@ -76,7 +130,7 @@ class AddWordViewControler: UIViewController
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)
     {
         let touch = touches.first
-        if touch?.view != self.dialogBoxView// Dismiss if a touch is detected outside the dialog box
+        if touch?.view != (self.dialogBoxView) // Dismiss if a touch is detected outside the dialog box
         { self.dismissView()}
     }
     
@@ -90,6 +144,7 @@ extension AddWordViewControler: UITextFieldDelegate
         customizeDialogBox()
         registerTextFieldDelgate()
         setFirstResponder()
+        textFieldHeight.constant = 0  //hide edittextbox
         
     }
     
@@ -141,7 +196,6 @@ extension AddWordViewControler
         if let wordfromTextfiled = textFiled.text
         {
             
-            
             if wordfromTextfiled.count == 0
             {
                 showZeroCountBanner()
@@ -160,7 +214,27 @@ extension AddWordViewControler
             
             if wordfromTextfiled.count != 0 && wordfromTextfiled.count < 31
             {
-                createnewWordEntry(wordName: wordfromTextfiled)
+                dismissView()
+                return true
+            }
+        }
+        return false
+    }
+    
+    private func isValidDefenition()->Bool
+    {
+        if let wordfromTextfiled = textFiled.text
+        {
+            
+            if wordfromTextfiled.count == 0
+            {
+                showZeroCountBanner()
+                dismissView()
+                return false
+                
+            }
+            if wordfromTextfiled.count < 300
+            {
                 dismissView()
                 return true
             }
@@ -171,7 +245,7 @@ extension AddWordViewControler
     private func createnewWordEntry(wordName: String)
     {
         
-        if let category = selectedCategory
+        if selectedCategory != nil
         {
             CoreDataManager.sharedManager.requestDataforSingleWord(nameOfWord: [wordName], category: self.selectedCategory!)
         }

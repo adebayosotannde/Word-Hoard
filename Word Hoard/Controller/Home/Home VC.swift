@@ -25,6 +25,17 @@ class HomeViewController: UIViewController
 
         
     }
+    @IBAction func displayPremiumOption(_ sender: Any)
+    {
+        if let popupViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PurchaseViewController") as? PurchaseViewController
+        {
+           
+            popupViewController.modalPresentationStyle = .formSheet
+            popupViewController.modalTransitionStyle = .coverVertical
+            present(popupViewController, animated: true)
+        }
+        
+    }
     
     @IBAction func chekMispelledWord(_ sender: Any)
     {
@@ -48,29 +59,38 @@ class HomeViewController: UIViewController
         {
             //Refrence to the User default.
             let defaults = UserDefaults.standard
-            let catergryName = defaults.string(forKey: UserDefualtManager.selectedCategoryToDisplay)
+            
+            if let catergryName = defaults.string(forKey: UserDefualtManager.selectedCategoryToDisplay)
+            {
+               
+                
+                if let retrivedCategory = CoreDataManager.sharedManager.reetriveCategoriefromString(categoryName: catergryName)
+                {
+                    itemList = CoreDataManager.sharedManager.loadItems(selectedCategory: retrivedCategory).shuffled()
+                    
+                    if itemList.count == 0
+                    {
+                        print("There are zero items in the this categorie")
+                    }else
+                    {
+                        tableView.setContentOffset(.zero, animated: true) //Scroll to the top of the table view.
+                        tableView.reloadData()
+                       return
+                    }
+                 
+                }else
+                    
+                {
+                    print("Categorie was not found in user default")
+                    #warning("Dont forget to switch up the defulat list given to the user. if no list is seelected")
+                    }
+            }
+            
+            
+            
             
          
-            if let retrivedCategory = CoreDataManager.sharedManager.reetriveCategoriefromString(categoryName: catergryName!)
-            {
-                itemList = CoreDataManager.sharedManager.loadItems(selectedCategory: retrivedCategory).shuffled()
-                
-                if itemList.count == 0
-                {
-                    print("There are zero items in the this categorie")
-                }else
-                {
-                    tableView.setContentOffset(.zero, animated: true) //Scroll to the top of the table view.
-                    tableView.reloadData()
-                   return
-                }
-             
-            }else
-                
-            {
-                print("Categorie was not found in user default")
-                #warning("Dont forget to switch up the defulat list given to the user. if no list is seelected")
-                }
+            
             
             
             

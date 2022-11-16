@@ -104,7 +104,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BoE-79-MJA">
-                                <rect key="frame" x="30" y="147" width="330" height="157.33333333333337"/>
+                                <rect key="frame" x="30" y="146.99999999999997" width="330" height="357.33333333333326"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Type here" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="XH5-KY-Hun">
                                         <rect key="frame" x="20" y="60" width="290" height="35"/>
@@ -125,8 +125,23 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hDz-3m-iFk">
+                                        <rect key="frame" x="10" y="105" width="310" height="200"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="bkJ-zT-CAh"/>
+                                        </constraints>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5sv-b7-s7T">
-                                        <rect key="frame" x="145" y="114.99999999999999" width="40" height="32.333333333333329"/>
+                                        <rect key="frame" x="145" y="315" width="40" height="32.333333333333314"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
@@ -150,22 +165,28 @@
                                         </connections>
                                     </button>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="SRJ-Ct-cDC">
-                                        <rect key="frame" x="261" y="116.33333333333331" width="51" height="31"/>
+                                        <rect key="frame" x="271" y="316.33333333333331" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="switchButtoninitiated:" destination="ftf-2n-23w" eventType="valueChanged" id="UcU-cL-VVp"/>
+                                        </connections>
                                     </switch>
                                 </subviews>
                                 <color key="backgroundColor" name="Theme Background "/>
                                 <constraints>
                                     <constraint firstItem="XH5-KY-Hun" firstAttribute="top" secondItem="Xpn-aG-eto" secondAttribute="bottom" constant="20" id="AAX-mm-us4"/>
+                                    <constraint firstItem="5sv-b7-s7T" firstAttribute="top" secondItem="hDz-3m-iFk" secondAttribute="bottom" constant="10" id="CCO-OY-mCP"/>
                                     <constraint firstItem="Xpn-aG-eto" firstAttribute="leading" secondItem="BoE-79-MJA" secondAttribute="leading" constant="10" id="GOn-2G-hFO"/>
-                                    <constraint firstItem="5sv-b7-s7T" firstAttribute="top" secondItem="XH5-KY-Hun" secondAttribute="bottom" constant="20" id="Y6R-dB-4v4"/>
+                                    <constraint firstItem="5sv-b7-s7T" firstAttribute="centerX" secondItem="BoE-79-MJA" secondAttribute="centerX" id="Q8C-ga-fgV"/>
+                                    <constraint firstItem="hDz-3m-iFk" firstAttribute="top" secondItem="XH5-KY-Hun" secondAttribute="bottom" constant="10" id="QIb-tu-TQ0"/>
                                     <constraint firstItem="Xpn-aG-eto" firstAttribute="top" secondItem="BoE-79-MJA" secondAttribute="top" constant="10" id="ZgJ-yr-tiO"/>
-                                    <constraint firstAttribute="trailing" secondItem="SRJ-Ct-cDC" secondAttribute="trailing" constant="20" id="ZoV-d5-CGV"/>
-                                    <constraint firstAttribute="bottom" secondItem="SRJ-Ct-cDC" secondAttribute="bottom" constant="10" id="bgi-N3-bFI"/>
+                                    <constraint firstAttribute="bottom" secondItem="SRJ-Ct-cDC" secondAttribute="bottom" constant="10" id="b2D-4F-1qb"/>
                                     <constraint firstAttribute="trailing" secondItem="XH5-KY-Hun" secondAttribute="trailing" constant="20" id="eTL-Dy-9a4"/>
-                                    <constraint firstItem="5sv-b7-s7T" firstAttribute="centerX" secondItem="BoE-79-MJA" secondAttribute="centerX" id="kbS-Qp-bsz"/>
+                                    <constraint firstItem="hDz-3m-iFk" firstAttribute="leading" secondItem="BoE-79-MJA" secondAttribute="leading" constant="10" id="gSR-Ya-zzq"/>
+                                    <constraint firstAttribute="trailing" secondItem="hDz-3m-iFk" secondAttribute="trailing" constant="10" id="j58-ir-o4g"/>
+                                    <constraint firstAttribute="bottom" secondItem="5sv-b7-s7T" secondAttribute="bottom" constant="10" id="kAe-n3-6SE"/>
                                     <constraint firstAttribute="trailing" secondItem="Xpn-aG-eto" secondAttribute="trailing" constant="10" id="o2s-Pn-KpA"/>
-                                    <constraint firstAttribute="bottom" secondItem="5sv-b7-s7T" secondAttribute="bottom" constant="10" id="oIo-6t-ddy"/>
                                     <constraint firstItem="XH5-KY-Hun" firstAttribute="leading" secondItem="BoE-79-MJA" secondAttribute="leading" constant="20" id="uP3-Vk-SMH"/>
+                                    <constraint firstAttribute="trailing" secondItem="SRJ-Ct-cDC" secondAttribute="trailing" constant="10" id="vgg-gh-B8T"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -180,13 +201,15 @@
                     <connections>
                         <outlet property="OkButton" destination="5sv-b7-s7T" id="rUy-sT-eHJ"/>
                         <outlet property="dialogBoxView" destination="BoE-79-MJA" id="8Y9-XZ-wNC"/>
+                        <outlet property="textEditField" destination="hDz-3m-iFk" id="KSD-Vm-7gL"/>
+                        <outlet property="textFieldHeight" destination="bkJ-zT-CAh" id="aoe-RM-paf"/>
                         <outlet property="textFiled" destination="XH5-KY-Hun" id="PNj-EJ-rL3"/>
                         <outlet property="userInputSwitch" destination="SRJ-Ct-cDC" id="Uhk-0p-tzd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="25q-Pm-0eJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1109" y="-78"/>
+            <point key="canvasLocation" x="1056.9230769230769" y="-47.630331753554501"/>
         </scene>
     </scenes>
     <resources>
@@ -196,6 +219,9 @@
         <namedColor name="Theme Background ">
             <color red="0.45490196078431372" green="0.72549019607843135" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
