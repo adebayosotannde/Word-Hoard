@@ -44,70 +44,98 @@
                                                     <rect key="frame" x="0.0" y="225.66666666666663" width="430" height="300"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="Fur-6n-SRI">
-                                                            <rect key="frame" x="30" y="98.000000000000028" width="370" height="103.66666666666666"/>
+                                                            <rect key="frame" x="30" y="70.000000000000028" width="370" height="160"/>
                                                             <subviews>
-                                                                <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="COSSET" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3CJ-4I-D9x">
+                                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Rpr-4n-cJ8">
                                                                     <rect key="frame" x="0.0" y="0.0" width="370" height="33.666666666666664"/>
-                                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="28"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="COSSET" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3CJ-4I-D9x">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="370" height="33.666666666666664"/>
+                                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="28"/>
+                                                                            <color key="textColor" name="Label Color"/>
+                                                                            <color key="highlightedColor" name="Text Color"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                </stackView>
+                                                                <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="cos-set" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UaI-xe-Zfu">
+                                                                    <rect key="frame" x="0.0" y="36.666666666666629" width="370" height="18"/>
+                                                                    <fontDescription key="fontDescription" type="italicSystem" pointSize="15"/>
                                                                     <color key="textColor" name="Label Color"/>
-                                                                    <color key="highlightedColor" name="Text Color"/>
+                                                                    <color key="highlightedColor" name="Text View Backgrround Color"/>
                                                                 </label>
                                                                 <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(v.) to pamper; treat with great care" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hdd-e9-RwF">
-                                                                    <rect key="frame" x="0.0" y="36.666666666666629" width="370" height="24"/>
+                                                                    <rect key="frame" x="0.0" y="57.666666666666629" width="370" height="24"/>
                                                                     <fontDescription key="fontDescription" name="PingFangHK-Semibold" family="PingFang HK" pointSize="17"/>
                                                                     <color key="textColor" name="Label Color"/>
                                                                     <color key="highlightedColor" name="Text Color"/>
                                                                 </label>
                                                                 <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(The five-star hotel was known to cosset its high-status guests.)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Byl-SW-fG8">
-                                                                    <rect key="frame" x="0.0" y="63.666666666666629" width="370" height="40"/>
+                                                                    <rect key="frame" x="0.0" y="84.666666666666629" width="370" height="40"/>
                                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="17"/>
+                                                                    <color key="textColor" name="Label Color"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="alternatives:  hang in, hang on, hold on, persisit,  hang in, hang on, hold on, persisit" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qHs-Y2-Bmj">
+                                                                    <rect key="frame" x="0.0" y="127.66666666666661" width="370" height="32.333333333333329"/>
+                                                                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="14"/>
                                                                     <color key="textColor" name="Label Color"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </stackView>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dgv-g5-e4B">
-                                                            <rect key="frame" x="180.66666666666666" y="40.000000000000028" width="69" height="50"/>
-                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <color key="tintColor" name="Complmentary Theme Color"/>
-                                                            <buttonConfiguration key="configuration" style="plain" image="speaker.wave.2.circle.fill" catalog="system">
-                                                                <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="30"/>
-                                                                <color key="baseForegroundColor" name="Complmentary Theme Color"/>
-                                                            </buttonConfiguration>
-                                                            <userDefinedRuntimeAttributes>
-                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                    <real key="value" value="15"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                            </userDefinedRuntimeAttributes>
-                                                            <connections>
-                                                                <action selector="speakerButtonPressed:" destination="V4A-Ow-2Yy" eventType="touchUpInside" id="7iH-zw-NIj"/>
-                                                                <action selector="speakerButtonPressed:" destination="2Oz-gj-VCi" eventType="touchUpInside" id="UkG-4Y-N44"/>
-                                                            </connections>
-                                                        </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7BV-JP-HcD">
-                                                            <rect key="frame" x="187.33333333333334" y="206.66666666666666" width="55.666666666666657" height="39"/>
-                                                            <color key="tintColor" name="Complmentary Theme Color"/>
-                                                            <state key="normal" title="Button"/>
-                                                            <buttonConfiguration key="configuration" style="plain" image="globe.europe.africa.fill" catalog="system">
-                                                                <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="21"/>
-                                                            </buttonConfiguration>
-                                                            <connections>
-                                                                <action selector="browserButtonPressed:" destination="V4A-Ow-2Yy" eventType="touchUpInside" id="v5z-la-Jrt"/>
-                                                            </connections>
-                                                        </button>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aOe-yP-tXH" userLabel="Action Stack View">
+                                                            <rect key="frame" x="176" y="235.00000000000003" width="78" height="38.999999999999972"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dgv-g5-e4B" userLabel="Speak Aloud Button">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="39" height="39"/>
+                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="39" id="4c7-m9-0o7"/>
+                                                                        <constraint firstAttribute="height" constant="39" id="JuY-Hs-fFG"/>
+                                                                    </constraints>
+                                                                    <color key="tintColor" name="Complmentary Theme Color"/>
+                                                                    <buttonConfiguration key="configuration" style="plain" image="speaker.wave.2.circle.fill" catalog="system">
+                                                                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="21"/>
+                                                                        <color key="baseForegroundColor" name="Complmentary Theme Color"/>
+                                                                    </buttonConfiguration>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                            <real key="value" value="15"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                    <connections>
+                                                                        <action selector="speakerButtonPressed:" destination="V4A-Ow-2Yy" eventType="touchUpInside" id="7iH-zw-NIj"/>
+                                                                        <action selector="speakerButtonPressed:" destination="2Oz-gj-VCi" eventType="touchUpInside" id="UkG-4Y-N44"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7BV-JP-HcD" userLabel="Launch Dictionary">
+                                                                    <rect key="frame" x="39" y="0.0" width="39" height="39"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="39" id="Etz-tg-1Qs"/>
+                                                                        <constraint firstAttribute="width" constant="39" id="k9d-t7-Tow"/>
+                                                                    </constraints>
+                                                                    <color key="tintColor" name="Complmentary Theme Color"/>
+                                                                    <state key="normal" title="Button"/>
+                                                                    <buttonConfiguration key="configuration" style="plain" image="globe.europe.africa.fill" catalog="system">
+                                                                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="21"/>
+                                                                    </buttonConfiguration>
+                                                                    <connections>
+                                                                        <action selector="browserButtonPressed:" destination="V4A-Ow-2Yy" eventType="touchUpInside" id="v5z-la-Jrt"/>
+                                                                    </connections>
+                                                                </button>
+                                                            </subviews>
+                                                        </stackView>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstItem="Dgv-g5-e4B" firstAttribute="centerX" secondItem="Whk-0b-pNx" secondAttribute="centerX" id="2ZN-xN-lfs"/>
                                                         <constraint firstItem="Fur-6n-SRI" firstAttribute="centerY" secondItem="Whk-0b-pNx" secondAttribute="centerY" id="8hm-N3-qjt"/>
-                                                        <constraint firstItem="7BV-JP-HcD" firstAttribute="top" secondItem="Fur-6n-SRI" secondAttribute="bottom" constant="5" id="Ekb-sJ-N78"/>
                                                         <constraint firstAttribute="trailing" secondItem="Fur-6n-SRI" secondAttribute="trailing" constant="30" id="IDH-sP-U4p"/>
-                                                        <constraint firstItem="Fur-6n-SRI" firstAttribute="top" secondItem="Dgv-g5-e4B" secondAttribute="bottom" constant="8" id="LYw-8x-Dae"/>
                                                         <constraint firstItem="Fur-6n-SRI" firstAttribute="leading" secondItem="Whk-0b-pNx" secondAttribute="leading" constant="30" id="WpD-7K-bHN"/>
                                                         <constraint firstAttribute="height" constant="300" id="Xqq-cm-WyT"/>
+                                                        <constraint firstItem="aOe-yP-tXH" firstAttribute="centerX" secondItem="Whk-0b-pNx" secondAttribute="centerX" id="nOK-KP-6zI"/>
                                                         <constraint firstItem="Fur-6n-SRI" firstAttribute="centerX" secondItem="Whk-0b-pNx" secondAttribute="centerX" id="uEd-PR-skj"/>
-                                                        <constraint firstItem="7BV-JP-HcD" firstAttribute="centerX" secondItem="Whk-0b-pNx" secondAttribute="centerX" id="wNU-15-iHn"/>
+                                                        <constraint firstItem="aOe-yP-tXH" firstAttribute="top" secondItem="Fur-6n-SRI" secondAttribute="bottom" constant="5" id="yNq-KK-0uD"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -122,7 +150,11 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="defenition" destination="hdd-e9-RwF" id="dkn-Ll-Rs3"/>
+                                            <outlet property="dictionaryButton" destination="7BV-JP-HcD" id="SrR-ZQ-qWX"/>
                                             <outlet property="example" destination="Byl-SW-fG8" id="mCk-Me-jUP"/>
+                                            <outlet property="pronounciationLabel" destination="UaI-xe-Zfu" id="FrC-Sc-saw"/>
+                                            <outlet property="speakerButton" destination="Dgv-g5-e4B" id="ikK-kz-eR8"/>
+                                            <outlet property="synonymsLabel" destination="qHs-Y2-Bmj" id="GoO-5s-5RM"/>
                                             <outlet property="word" destination="3CJ-4I-D9x" id="hj5-Ep-bmg"/>
                                         </connections>
                                     </tableViewCell>
@@ -133,7 +165,7 @@
                                 </connections>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="CL2-wn-yAs">
-                                <rect key="frame" x="30" y="89" width="50" height="50"/>
+                                <rect key="frame" x="30" y="89" width="108" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="isD-Eb-gOs">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -153,28 +185,48 @@
                                             <segue destination="CnC-F5-Okh" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="L8d-re-7td"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JK3-A9-Cft">
+                                        <rect key="frame" x="58" y="0.0" width="50" height="50"/>
+                                        <color key="backgroundColor" name="Text View Backgrround Color"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="ivH-0S-6j8"/>
+                                            <constraint firstAttribute="height" constant="50" id="zyw-7p-bu4"/>
+                                        </constraints>
+                                        <color key="tintColor" name="Complmentary Theme Color"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="brain.head.profile" catalog="system"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mat-xO-7ho">
-                                <rect key="frame" x="30.000000000000004" y="788" width="48.333333333333343" height="50"/>
-                                <color key="backgroundColor" name="Label Color"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="jlx-hT-m9u"/>
-                                </constraints>
-                                <color key="tintColor" name="Complmentary Theme Color"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="pin.fill" catalog="system">
-                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
-                                </buttonConfiguration>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="15"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="URe-My-NV3" kind="show" id="hhI-R2-hzS"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kvX-Bg-LV4">
+                                <rect key="frame" x="30.000000000000004" y="818" width="48.333333333333343" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mat-xO-7ho" userLabel="Pin Button">
+                                        <rect key="frame" x="0.0" y="0.0" width="48.333333333333336" height="50"/>
+                                        <color key="backgroundColor" name="Label Color"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="jlx-hT-m9u"/>
+                                        </constraints>
+                                        <color key="tintColor" name="Complmentary Theme Color"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="pin.fill" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="URe-My-NV3" kind="show" id="hhI-R2-hzS"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ISM-ra-Rry">
                                 <rect key="frame" x="254.66666666666663" y="89" width="145.33333333333337" height="50"/>
                                 <color key="backgroundColor" name="Label Color"/>
@@ -193,21 +245,21 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="displayPremiumOption:" destination="4ot-eo-5PJ" eventType="touchUpInside" id="aWY-dw-XC4"/>
+                                    <action selector="purchasePremiumButton:" destination="4ot-eo-5PJ" eventType="touchUpInside" id="gmE-rV-vlh"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="nHB-C1-zwf"/>
                         <color key="backgroundColor" name="Theme Background "/>
                         <constraints>
+                            <constraint firstItem="nHB-C1-zwf" firstAttribute="bottom" secondItem="kvX-Bg-LV4" secondAttribute="bottom" constant="30" id="6H1-id-BF6"/>
+                            <constraint firstItem="kvX-Bg-LV4" firstAttribute="leading" secondItem="nHB-C1-zwf" secondAttribute="leading" constant="30" id="GSC-Nh-QOB"/>
                             <constraint firstItem="ISM-ra-Rry" firstAttribute="top" secondItem="nHB-C1-zwf" secondAttribute="top" constant="30" id="Goh-2s-dgU"/>
                             <constraint firstItem="Vj9-iO-QeP" firstAttribute="top" secondItem="zwj-62-uKy" secondAttribute="top" id="KH6-ws-9dm"/>
-                            <constraint firstItem="mat-xO-7ho" firstAttribute="leading" secondItem="nHB-C1-zwf" secondAttribute="leading" constant="30" id="PDD-8X-dl9"/>
                             <constraint firstItem="nHB-C1-zwf" firstAttribute="trailing" secondItem="ISM-ra-Rry" secondAttribute="trailing" constant="30" id="Q15-9s-cYv"/>
                             <constraint firstAttribute="bottom" secondItem="Vj9-iO-QeP" secondAttribute="bottom" id="YVk-KR-yig"/>
                             <constraint firstItem="CL2-wn-yAs" firstAttribute="leading" secondItem="nHB-C1-zwf" secondAttribute="leading" constant="30" id="gBV-uB-y8n"/>
                             <constraint firstAttribute="trailing" secondItem="Vj9-iO-QeP" secondAttribute="trailing" id="uqu-VR-vVm"/>
-                            <constraint firstItem="nHB-C1-zwf" firstAttribute="bottom" secondItem="mat-xO-7ho" secondAttribute="bottom" constant="60" id="wZe-qT-riO"/>
                             <constraint firstItem="CL2-wn-yAs" firstAttribute="top" secondItem="nHB-C1-zwf" secondAttribute="top" constant="30" id="xXk-65-mgk"/>
                             <constraint firstItem="Vj9-iO-QeP" firstAttribute="leading" secondItem="zwj-62-uKy" secondAttribute="leading" id="yGS-g8-bD8"/>
                         </constraints>
@@ -591,7 +643,7 @@
                                 <items>
                                     <navigationItem id="yVR-xs-aVQ">
                                         <barButtonItem key="rightBarButtonItem" title="Exit" id="s9G-Tk-aJG">
-                                            <color key="tintColor" name="Text Color"/>
+                                            <color key="tintColor" name="Theme Background "/>
                                             <connections>
                                                 <action selector="exitButtonPressed:" destination="y9g-Tl-HTc" id="VN2-aD-OMz"/>
                                             </connections>
@@ -795,7 +847,7 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="4cW-1l-esy" firstAttribute="top" secondItem="pu8-7O-4Hx" secondAttribute="bottom" id="502-ah-ryX"/>
                                     <constraint firstItem="4cW-1l-esy" firstAttribute="centerX" secondItem="Vct-iQ-TLi" secondAttribute="centerX" id="9Vu-xM-gvc"/>
@@ -1041,9 +1093,17 @@
             <point key="canvasLocation" x="2380.4651162790697" y="-102.36051502145924"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="TBA-Mj-W3T"/>
+        <designable name="Vct-iQ-TLi"/>
+        <designable name="eOk-Ns-tmp"/>
+        <designable name="pu8-7O-4Hx"/>
+        <designable name="vUL-wU-KFs"/>
+    </designables>
     <resources>
         <image name="arrow.left.circle.fill" catalog="system" width="128" height="123"/>
         <image name="books.vertical.fill" catalog="system" width="128" height="110"/>
+        <image name="brain.head.profile" catalog="system" width="120" height="128"/>
         <image name="checkmark.circle.fill" catalog="system" width="128" height="123"/>
         <image name="checkmark.seal.fill" catalog="system" width="128" height="124"/>
         <image name="crown.fill" catalog="system" width="128" height="92"/>
@@ -1082,9 +1142,6 @@
         </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

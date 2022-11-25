@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8149A51BB2F10C9608D81596 /* Pods_Word_Hoard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6533E349487749167AF6D6F2 /* Pods_Word_Hoard.framework */; };
+		EE419F82292EE0A800D64C20 /* Premium Word Definition.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE419F81292EE0A800D64C20 /* Premium Word Definition.swift */; };
+		EE419F84292EE6B300D64C20 /* Other.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE419F83292EE6B300D64C20 /* Other.swift */; };
 		EE690DD22924562000E8AD5A /* PurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE690DD12924562000E8AD5A /* PurchaseViewController.swift */; };
 		EEB53278292403D20072CB65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB53277292403D20072CB65 /* AppDelegate.swift */; };
 		EEB5327A292403D20072CB65 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB53279292403D20072CB65 /* SceneDelegate.swift */; };
@@ -51,6 +53,8 @@
 		6533E349487749167AF6D6F2 /* Pods_Word_Hoard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Word_Hoard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AAD2B43AEACDFB6BE4B35BE /* Pods-Word Hoard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Word Hoard.debug.xcconfig"; path = "Target Support Files/Pods-Word Hoard/Pods-Word Hoard.debug.xcconfig"; sourceTree = "<group>"; };
 		989B6CADF79D3DC3F88F79B8 /* Pods-Word Hoard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Word Hoard.release.xcconfig"; path = "Target Support Files/Pods-Word Hoard/Pods-Word Hoard.release.xcconfig"; sourceTree = "<group>"; };
+		EE419F81292EE0A800D64C20 /* Premium Word Definition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Premium Word Definition.swift"; sourceTree = "<group>"; };
+		EE419F83292EE6B300D64C20 /* Other.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Other.swift; sourceTree = "<group>"; };
 		EE690DD12924562000E8AD5A /* PurchaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseViewController.swift; sourceTree = "<group>"; };
 		EEB53274292403D20072CB65 /* Word Hoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Word Hoard.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEB53277292403D20072CB65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -125,6 +129,7 @@
 		EEB5326B292403D20072CB65 = {
 			isa = PBXGroup;
 			children = (
+				EE419F83292EE6B300D64C20 /* Other.swift */,
 				EEB53276292403D20072CB65 /* Word Hoard */,
 				EEB53275292403D20072CB65 /* Products */,
 				3D337445E79E197F099CEF6D /* Pods */,
@@ -143,14 +148,14 @@
 		EEB53276292403D20072CB65 /* Word Hoard */ = {
 			isa = PBXGroup;
 			children = (
-				EE690DD12924562000E8AD5A /* PurchaseViewController.swift */,
 				EEB53291292405240072CB65 /* App and Scene Delgate */,
+				EEB532E32924079E0072CB65 /* Assets */,
 				EEB5329A292406910072CB65 /* Fonts */,
 				EEB5329B292406D20072CB65 /* Lottie */,
 				EEB532A0292406EA0072CB65 /* Model */,
-				EEB532B5292407680072CB65 /* Controller */,
 				EEB532C9292407800072CB65 /* View */,
-				EEB532E32924079E0072CB65 /* Assets */,
+				EEB532B5292407680072CB65 /* Controller */,
+				EE690DD12924562000E8AD5A /* PurchaseViewController.swift */,
 				EEB53288292403D30072CB65 /* Info.plist */,
 				EEB532B4292407210072CB65 /* Containers */,
 			);
@@ -247,6 +252,7 @@
 		EEB532A8292406EA0072CB65 /* Word */ = {
 			isa = PBXGroup;
 			children = (
+				EE419F81292EE0A800D64C20 /* Premium Word Definition.swift */,
 				EEB532A9292406EA0072CB65 /* WordAlternative.swift */,
 				EEB532AA292406EA0072CB65 /* WordStructure.swift */,
 			);
@@ -463,6 +469,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE419F82292EE0A800D64C20 /* Premium Word Definition.swift in Sources */,
 				EEB53293292405790072CB65 /* String Keys.swift in Sources */,
 				EEB53282292403D20072CB65 /* Word_Hoard.xcdatamodeld in Sources */,
 				EEB532E7292410280072CB65 /* UserDefaultManager.swift in Sources */,
@@ -472,6 +479,7 @@
 				EEB532B2292406EA0072CB65 /* WordStructure.swift in Sources */,
 				EEB532C2292407680072CB65 /* Select Categorie.swift in Sources */,
 				EEB532B3292406EA0072CB65 /* Dictonary Request.swift in Sources */,
+				EE419F84292EE6B300D64C20 /* Other.swift in Sources */,
 				EEB532DA292407800072CB65 /* Word.swift in Sources */,
 				EEB53278292403D20072CB65 /* AppDelegate.swift in Sources */,
 				EEB532D8292407800072CB65 /* Home.swift in Sources */,
@@ -642,6 +650,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -671,6 +680,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

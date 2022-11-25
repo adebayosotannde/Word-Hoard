@@ -5,11 +5,13 @@
         <relationship name="items" optional="YES" toMany="YES" deletionRule="No Action" destinationEntity="Item" inverseName="parentCategory" inverseEntity="Item"/>
     </entity>
     <entity name="Item" representedClassName="Item" syncable="YES" codeGenerationType="class">
-        <attribute name="defenition" attributeType="String"/>
-        <attribute name="example" attributeType="String" defaultValueString="no example"/>
-        <attribute name="partofspeech" attributeType="String"/>
+        <attribute name="defenition" attributeType="String" defaultValueString="Item"/>
+        <attribute name="example" attributeType="String" defaultValueString="example"/>
+        <attribute name="partofspeech" attributeType="String" defaultValueString="partofspeech"/>
+        <attribute name="pronunciation" attributeType="String" defaultValueString="pronunciation"/>
         <attribute name="score" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="word" attributeType="String"/>
+        <attribute name="synonym" attributeType="String" defaultValueString="synonym"/>
+        <attribute name="word" attributeType="String" defaultValueString="word"/>
         <relationship name="parentCategory" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="Category" inverseName="items" inverseEntity="Category"/>
     </entity>
 </model>

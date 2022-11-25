@@ -17,6 +17,12 @@ class HomeTableViewCell: UITableViewCell, AVSpeechSynthesizerDelegate
     @IBOutlet weak var defenition: UILabel!
     @IBOutlet weak var example: UILabel!
     
+    @IBOutlet weak var pronounciationLabel: UILabel!
+    @IBOutlet weak var speakerButton: UIButton!
+    @IBOutlet weak var synonymsLabel: UILabel!
+    
+    @IBOutlet weak var dictionaryButton: UIButton!
+    
     required init?(coder: NSCoder)
     {
         super.init(coder: coder)
@@ -34,11 +40,115 @@ class HomeTableViewCell: UITableViewCell, AVSpeechSynthesizerDelegate
     
     public func configureWithDafaultList(with wordToConfigureWith: WordAlternative)
     {
-        partOfSpeech = wordToConfigureWith.type.rawValue
         word.text = wordToConfigureWith.name.uppercased()
-        let secondLine  = wordToConfigureWith.type.rawValue + " " +   wordToConfigureWith.defineition
-        defenition.text = secondLine
+        pronounciationLabel.text = wordToConfigureWith.pronounciation
+        defenition.text = "(" + wordToConfigureWith.partOfSpeech + ") " +   wordToConfigureWith.defineition
+        synonymsLabel.text = displayAynonymsAsSring(synonyms: wordToConfigureWith.synonyms
+        )
+        
+      
+        
+        
+        
+       
+       
         example.text = wordToConfigureWith.example
+        
+        
+        displayDictionaryButton(singleWord: wordToConfigureWith.name)
+        
+        
+    }
+    
+    public func configureWithItem(item: Item)
+    {
+        word.text = item.word?.uppercased()
+        if let partOfSpeech = item.partofspeech, let defenition = item.defenition
+        {
+            self.defenition.text = partOfSpeech + " " +  defenition
+        }
+        example.text = item.example
+     
+       displayDictionaryButton(singleWord: item.word!)
+        
+        
+        
+    }
+    
+    //Show or hide the dictionary button
+    func displayDictionaryButton(singleWord: String)
+    {
+        if UIReferenceLibraryViewController.dictionaryHasDefinition(forTerm: singleWord)
+        {
+                  
+            dictionaryButton.isHidden = false
+        }
+        else
+        {
+            dictionaryButton.isHidden = true
+        }
+    }
+    
+    
+    
+    func displayAynonymsAsSring(synonyms: [String])->String
+    {
+        
+        print(synonyms.count)
+        if synonyms.count == 0
+        {
+            return ""
+        }
+        var text = "alternative: "
+        
+        if synonyms.count == 1
+        {
+           
+            return text + synonyms[0]
+        }
+        
+        if synonyms.count > 1
+        {
+           
+            
+            
+            for index in 0..<synonyms.count
+            {
+                print(index)
+                print(synonyms[index])
+                 if index == 0 || index < synonyms.count - 1 
+                {
+                     text = text + synonyms[index] + ", "
+                 }else
+                {
+                     text = text + synonyms[index]
+                     
+                 }
+                
+              
+                
+            }
+            
+            return text
+        }
+        
+          
+        
+        
+        return ""
+    }
+    
+    func hideExampleLabel()
+    {
+        if example.text == ""
+        {
+            example.isHidden = true
+        }
+        else
+        {
+            example.isHidden = false
+            
+        }
     }
     
     public func configureWithUserList(with wordToConfigureWith: Item)
@@ -88,7 +198,7 @@ class HomeTableViewCell: UITableViewCell, AVSpeechSynthesizerDelegate
     {
         if let wordtopass = word.text
         {
-            postBarcodeNotification(code: UserInterfaceNotfications.showWebDefinition,nameOfWord: wordtopass)
+           // postBarcodeNotification(code: UserInterfaceNotfications.showWebDefinition,nameOfWord: wordtopass)
         }
         
     }

@@ -14,7 +14,7 @@ class UserDefualtManager
     private init() {} // Prevent clients from creating another instance.
     
     
-    static let selectedCategoryToDisplay = "selectedCategory"
+    static let pinnedCategorie = "selectedCategory"
     
     
     
@@ -22,7 +22,7 @@ class UserDefualtManager
     {
         //Refrence to the User default.
         let defaults = UserDefaults.standard
-        let catergoryName = defaults.string(forKey: UserDefualtManager.selectedCategoryToDisplay)
+        let catergoryName = defaults.string(forKey: UserDefualtManager.pinnedCategorie)
         
         var wordList: [Item]  = []
         do

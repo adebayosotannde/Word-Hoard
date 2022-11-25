@@ -212,7 +212,7 @@ class CoreDataManager
         }
     }
     
-    func reetriveCategoriefromString(categoryName: String)->Category?
+    func retriveCategoriefromString(categoryName: String)->Category?
     {
         for category in getAllCategories()
         {

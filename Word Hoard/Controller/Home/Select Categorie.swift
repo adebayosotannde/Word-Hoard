@@ -13,7 +13,6 @@ class SelectCategorieViewController: UIViewController
 {
     var categories = [Category]()
     
-    
     @IBOutlet var animationView: AnimationView?
     @IBOutlet weak var tableView: UITableView!
 
@@ -78,7 +77,7 @@ extension SelectCategorieViewController: UITableViewDelegate
     internal func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
         let defaults = UserDefaults.standard
-        defaults.set(categories[indexPath.row].name, forKey: UserDefualtManager.selectedCategoryToDisplay)
+        defaults.set(categories[indexPath.row].name, forKey: UserDefualtManager.pinnedCategorie)
         
         postBarcodeNotification(code: NotificationString.updateMainUIList)
         dismiss(animated: true)

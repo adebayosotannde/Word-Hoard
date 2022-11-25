@@ -10,17 +10,12 @@ import UIKit
 struct WordAlternative
 {
     var name: String
-    var type: WordType
+    var pronounciation: String
+    var synonyms: [String]
+    var partOfSpeech: String
     var defineition: String
     var example: String
 }
 
-
-enum WordType: String
-{
-    case ajdective = "(adjective)"
-    case noun = "(noun)"
-    case verb = "(verb)"
-}
 
 
