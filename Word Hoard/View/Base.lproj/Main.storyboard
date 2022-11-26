@@ -276,7 +276,7 @@
         <!--Categories-->
         <scene sceneID="mbu-nS-mZ1">
             <objects>
-                <viewController storyboardIdentifier="newVC" id="y9C-rA-QvD" customClass="CollectionViewController" customModule="Word_Hoard" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="newVC" id="y9C-rA-QvD" customClass="CategorieViewController" customModule="Word_Hoard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="y6f-4a-gJ7">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -536,10 +536,10 @@
             </objects>
             <point key="canvasLocation" x="3280.4651162790697" y="-102.36051502145924"/>
         </scene>
-        <!--Add Multiple Items View Controller-->
+        <!--Add Multiple Words View Controller-->
         <scene sceneID="KRa-rh-aOv">
             <objects>
-                <viewController storyboardIdentifier="AddMultipleItemsViewController" id="zs4-Ry-adO" customClass="AddMultipleItemsViewController" customModule="Word_Hoard" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddMultipleWordsViewController" id="zs4-Ry-adO" customClass="AddMultipleWordsViewController" customModule="Word_Hoard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8Zr-lC-Jr5">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -600,7 +600,7 @@
                     <connections>
                         <outlet property="activityIndicator" destination="81N-xy-sPu" id="j1E-xU-pXu"/>
                         <outlet property="okButton" destination="dV6-BX-imD" id="6Vk-sr-V1c"/>
-                        <outlet property="textViewForClass" destination="2at-tL-gCD" id="sXT-Nw-Hn2"/>
+                        <outlet property="uiTextView" destination="2at-tL-gCD" id="sXT-Nw-Hn2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7T1-0e-Dv4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -928,7 +928,7 @@
         <!--Categories-->
         <scene sceneID="yHc-hU-aha">
             <objects>
-                <viewController storyboardIdentifier="selectCategorie" id="TZ2-wz-hhl" customClass="SelectCategorieViewController" customModule="Word_Hoard" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="selectCategorie" id="TZ2-wz-hhl" customClass="PinCategorieViewController" customModule="Word_Hoard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Rgs-B8-XZp">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="863"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -62,7 +62,7 @@ struct TableViewCellValues
 struct UserInterfaceNotfications
 {
     static let notificationKey = "com.Learner.notificationKey"
-    static let showMultiListVC = "com.Learner.showMultiListVC"
+  
    static let showWebDefinition = "com.Learner.showWebDefinition"
     
   

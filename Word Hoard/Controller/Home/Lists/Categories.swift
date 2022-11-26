@@ -2,18 +2,18 @@ import UIKit
 import Lottie
 
 
-class CollectionViewController: UIViewController
+class CategorieViewController: UIViewController
 {
     var categories = [Category]()
+    
     @IBOutlet var animationView: AnimationView?
     @IBOutlet weak var tableView: UITableView!
     
     @IBAction func addNewCollection(_ sender: Any)
     {
-        AddCollectionViewController.showPopup(parentVC: self)
+        AddCategorieViewController.showPopup(parentVC: self)
     }
     
-   
     @IBAction func dismissViewButton(_ sender: Any)
     {
        
@@ -26,8 +26,14 @@ class CollectionViewController: UIViewController
         registerNotificationCenter()
         startLottieAnimation()
         loadAllCollections()
+        determineIfTableViewShouldbeHidden()
     }
-    
+
+}
+
+//MARK: - SETUP
+extension CategorieViewController
+{
     fileprivate func startLottieAnimation()
     {
         animationView?.play()
@@ -38,56 +44,30 @@ class CollectionViewController: UIViewController
     private func loadAllCollections()
     {
         categories = CoreDataManager.sharedManager.getAllCategories()
-        determineIfTableViewShouldbeHidden()
-        self.tableView.reloadData()
+        
+        
     }
     
     fileprivate func determineIfTableViewShouldbeHidden()
     {
         if categories.isEmpty
         {
+            //hide the table view becuase the collectionview is empty
             tableView.isHidden = true
         }
         else
         {
-            self.tableView.isHidden = false
+            tableView.isHidden = false
         }
+        
+        tableView.reloadData()
     }
-    
-    
 }
  
-//MARK: - UITABLE View Delgate Functions
-extension CollectionViewController: UITableViewDelegate
+//MARK: - UITABLE VIEW DELGATE AND DATA-SOURCE FUNCTIONS
+extension CategorieViewController: UITableViewDataSource, UITableViewDelegate
 {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
-    {
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let wordlistvc = storyBoard.instantiateViewController(withIdentifier: "WordsViewControler") as! WordsViewControler
-        wordlistvc.selectedCategory = categories[indexPath.row]
-        wordlistvc.modalPresentationStyle = .popover
-        navigationController?.pushViewController(wordlistvc, animated: true)
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
-    {
-        return TableViewCellValues.heightForTableViewCells
-    }
-    
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath)
-    {
-        if editingStyle == .delete
-        {
-            
-            CoreDataManager.sharedManager.requestToDeleteCategory(category: categories[indexPath.row])
-           loadAllCollections()
-        }
-    }
-}
-
-//MARK: - UITABLE View Datasource Functions
-extension CollectionViewController: UITableViewDataSource
-{
+    //DATA-SOURCE
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell =  tableView.dequeueReusableCell(withIdentifier: CategorieTableViewCell.identifer, for: indexPath) as! CategorieTableViewCell
@@ -99,19 +79,43 @@ extension CollectionViewController: UITableViewDataSource
     {
         return categories.count
     }
+    
+    //DELGATE
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+    {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let wordlistvc = storyBoard.instantiateViewController(withIdentifier: "WordsViewControler") as! WordsViewControler
+        wordlistvc.selectedCategory = categories[indexPath.row]
+        wordlistvc.modalPresentationStyle = .popover
+        navigationController?.pushViewController(wordlistvc, animated: true)
+    }
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
+    {
+        return TableViewCellValues.heightForTableViewCells
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath)
+    {
+        if editingStyle == .delete
+        {
+            CoreDataManager.sharedManager.requestToDeleteCategory(category: categories[indexPath.row])
+           loadAllCollections()
+        }
+    }
 }
 
 
-//MARK: - Notification Canter
-extension CollectionViewController
+
+//MARK: - NOTIFICATION CENTER
+extension CategorieViewController
 {
     private func registerNotificationCenter()
     {
         //Obsereves the Notification
         NotificationCenter.default.addObserver(self, selector: #selector(doWhenNotified(_:)), name: Notification.Name(NotificationString.notificationKey), object: nil)
     }
-    
-    
+
     @objc func doWhenNotified(_ notiofication: NSNotification)
     {
         if let dict = notiofication.userInfo as NSDictionary?
@@ -119,7 +123,8 @@ extension CollectionViewController
             if (dict[NotificationString.updateCollectionVC] as? String) != nil
             {
                 loadAllCollections()
-                
+                determineIfTableViewShouldbeHidden()
+
             }
             
         }

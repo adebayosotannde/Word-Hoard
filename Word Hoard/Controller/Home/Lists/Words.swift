@@ -39,7 +39,7 @@ class WordsViewControler: UIViewController
     {
         if let categoryToPass = selectedCategory
         {
-            AddMultipleItemsViewController.showView(parentVC: self, selectedCategory: categoryToPass)
+            AddMultipleWordsViewController.showView(parentVC: self, selectedCategory: categoryToPass)
         }
     }
     
@@ -51,6 +51,12 @@ class WordsViewControler: UIViewController
         }
     }
     
+   
+}
+
+//MARK: - SETUP
+extension WordsViewControler
+{
     fileprivate func startLottieAnimation()
     {
         animationView?.play()
@@ -58,7 +64,7 @@ class WordsViewControler: UIViewController
         animationView?.loopMode = .loop
     }
     
-    fileprivate func loadAllCollections()
+    fileprivate func reloadData()
     {
         itemArray = CoreDataManager.sharedManager.loadItems(selectedCategory: selectedCategory!)
         determineIfTableViewShouldbeHidden()
@@ -77,10 +83,13 @@ class WordsViewControler: UIViewController
             tableView.isHidden = false
         }
     }
+    
 }
 
-extension WordsViewControler: UITableViewDataSource
+//MARK: -  UITABLE VIEW DELGATE AND DATA-SOURCE FUNCTIONS
+extension WordsViewControler: UITableViewDataSource, UITableViewDelegate
 {
+    //DATA-SOURCE
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         itemArray.count
@@ -92,10 +101,8 @@ extension WordsViewControler: UITableViewDataSource
         cell.configure(with: itemArray[indexPath.row])
         return cell
     }
-}
-
-extension WordsViewControler: UITableViewDelegate
-{
+    
+    //DELGATE
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
     {
         return TableViewCellValues.heightForTableViewCells
@@ -106,10 +113,15 @@ extension WordsViewControler: UITableViewDelegate
         if editingStyle == .delete
         {
             CoreDataManager.sharedManager.requestToDeleteWord(specificWord: itemArray[indexPath.row])
-            loadAllCollections()
+            reloadData()
         }
     }
 }
+
+
+
+    
+
 
 //MARK: - Notification Canter
 extension WordsViewControler
@@ -128,14 +140,10 @@ extension WordsViewControler
         {
             if (dict[NotificationString.updateWordVC] as? String) != nil
             {
-        
-                loadAllCollections()
+    
+                reloadData()
             }
             
-            if (dict[UserInterfaceNotfications.showMultiListVC] as? String) != nil
-            {
-                print("Mulri Line Request Recived")
-            }
         }
     }
     

@@ -15,6 +15,8 @@ struct WordAlternative
     var partOfSpeech: String
     var defineition: String
     var example: String
+    
+    
 }
 
 

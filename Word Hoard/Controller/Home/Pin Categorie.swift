@@ -9,7 +9,7 @@ import UIKit
 import Lottie
 
 @MainActor
-class SelectCategorieViewController: UIViewController
+class PinCategorieViewController: UIViewController
 {
     var categories = [Category]()
     
@@ -19,17 +19,35 @@ class SelectCategorieViewController: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        startLottieAnimation()
         loadAllCollections()
         determineIfTableViewShouldbeHidden()
-        startLottieAnimation()
+        
     }
+  
     
+    
+   
+    
+  
+}
+
+//MARK: - SETUP
+extension PinCategorieViewController
+{
+    fileprivate func startLottieAnimation()
+    {
+        animationView?.play()
+        animationView?.backgroundColor = .clear
+        animationView?.loopMode = .loop
+    }
+
     private func loadAllCollections()
     {
         categories = CoreDataManager.sharedManager.getAllCategories()
+       
         
     }
-    
     
     fileprivate func determineIfTableViewShouldbeHidden()
     {
@@ -45,19 +63,12 @@ class SelectCategorieViewController: UIViewController
         
         tableView.reloadData()
     }
-    
-    fileprivate func startLottieAnimation()
-    {
-        animationView?.play()
-        animationView?.backgroundColor = .clear
-        animationView?.loopMode = .loop
-    }
-
 }
 
-//MARK: - UITABLE View Datasource Functions
-extension SelectCategorieViewController: UITableViewDataSource
+//MARK: -  UITABLE VIEW DELGATE AND DATA-SOURCE FUNCTIONS
+extension PinCategorieViewController: UITableViewDataSource, UITableViewDelegate
 {
+    //DATA-SOURCE
     internal func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell =  tableView.dequeueReusableCell(withIdentifier: CategorieTableViewCell.identifer, for: indexPath) as! CategorieTableViewCell
@@ -69,11 +80,8 @@ extension SelectCategorieViewController: UITableViewDataSource
     {
         return categories.count
     }
-}
-
-//MARK: - UITABLE View Delgate Functions
-extension SelectCategorieViewController: UITableViewDelegate
-{
+    
+    //DELGATE FUNCTIONS
     internal func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
         let defaults = UserDefaults.standard
@@ -89,8 +97,10 @@ extension SelectCategorieViewController: UITableViewDelegate
     }
 }
 
+
+
 //MARK: - Notification Canter
-extension SelectCategorieViewController
+extension PinCategorieViewController
 {
     private func postBarcodeNotification(code: String)
     {

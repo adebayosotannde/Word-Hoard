@@ -12,7 +12,7 @@ import Lottie
 class HomeViewController: UIViewController
 {
     var itemList: [Item] = []
-    
+
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad()
@@ -57,7 +57,7 @@ extension HomeViewController
                 {
                     //Populate the itemlist
                     itemList = CoreDataManager.sharedManager.loadItems(selectedCategory: retrivedCategory).shuffled()
-                    
+ 
                     if itemList.count == 0
                     {
                         print("There are zero items in the this categorie")
@@ -89,7 +89,7 @@ extension HomeViewController
 //MARK: -  UITABLE VIEW DELGATE AND DATA-SOURCE FUNCTIONS
 extension HomeViewController:  UITableViewDataSource, UITableViewDelegate
 {
-    //
+    //DATA-SOURCE
     internal func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         if itemList.count == 0
@@ -121,6 +121,39 @@ extension HomeViewController:  UITableViewDataSource, UITableViewDelegate
         return UIScreen.main.bounds.size.height
     }
     
+    
+    
+    //
+    
+    
+    
+#warning("Implement this function")
+    
+//
+//    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath)
+//    {
+//        print("Cell Currently Displayed is \(indexPath.row) with word \(itemList[indexPath.row].word!)")
+//
+//        numberOFItemsLeft(currentIndex: indexPath.row)
+//        }
+//
+//    func numberOFItemsLeft(currentIndex: Int)->Int
+//    {
+//        var numberOFItems = itemList.count - 1
+//        var itemsLeft =  numberOFItems - currentIndex
+//
+//        if itemsLeft < 10
+//        {
+//
+//        itemList = itemList + itemList
+//            tableView.reloadData()
+//            print("Fetching more words and appending them to the array")
+//        }
+//
+//
+//        print("There are \(itemsLeft) words Left to display ")
+//        return itemsLeft
+//    }
 }
 
 //MARK: - NOTIFICATION CENTER

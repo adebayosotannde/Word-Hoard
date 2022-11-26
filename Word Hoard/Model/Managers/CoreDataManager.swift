@@ -100,12 +100,15 @@ class CoreDataManager
        
     }
     
+    #warning("This does not work properly")
     @discardableResult
     private func categoryAlreadyExists(categorieName: String)->Bool
     {
+        print("Checking for duplicate categories")
         let allCategories = getAllCategories()
         for category in categoryArray
         {
+            print(category.name?.lowercased())
             if category.name?.lowercased() == categorieName.lowercased()
             {
                 return true
@@ -116,6 +119,9 @@ class CoreDataManager
     
     
     //MARK: - Functions used to add items
+    /**
+     Function accepts a array of string and a category to be processed. Each word in the array is checked to determine if it exists in the category before it is added to the categorie
+     */
     func requestDataforSingleWord(nameOfWord: [String], category: Category)
     {
         var numberOfDuplicateWords = 0 //Check for duplicate words

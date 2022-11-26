@@ -26,12 +26,11 @@
 		EEB532B2292406EA0072CB65 /* WordStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB532AA292406EA0072CB65 /* WordStructure.swift */; };
 		EEB532B3292406EA0072CB65 /* Dictonary Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB532AC292406EA0072CB65 /* Dictonary Request.swift */; };
 		EEB532C1292407680072CB65 /* Home VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB532B7292407680072CB65 /* Home VC.swift */; };
-		EEB532C2292407680072CB65 /* Select Categorie.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB532B8292407680072CB65 /* Select Categorie.swift */; };
+		EEB532C2292407680072CB65 /* Pin Categorie.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB532B8292407680072CB65 /* Pin Categorie.swift */; };
 		EEB532C3292407680072CB65 /* Words.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB532BA292407680072CB65 /* Words.swift */; };
 		EEB532C4292407680072CB65 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB532BB292407680072CB65 /* Categories.swift */; };
 		EEB532C5292407690072CB65 /* Add Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB532BD292407680072CB65 /* Add Word.swift */; };
-		EEB532C6292407690072CB65 /* Add Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB532BE292407680072CB65 /* Add Collection.swift */; };
-		EEB532C7292407690072CB65 /* Sub Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB532BF292407680072CB65 /* Sub Category.swift */; };
+		EEB532C6292407690072CB65 /* Add Categorie.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB532BE292407680072CB65 /* Add Categorie.swift */; };
 		EEB532C8292407690072CB65 /* Add Multiple Words.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB532C0292407680072CB65 /* Add Multiple Words.swift */; };
 		EEB532D8292407800072CB65 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB532CB292407800072CB65 /* Home.swift */; };
 		EEB532D9292407800072CB65 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB532CC292407800072CB65 /* Category.swift */; };
@@ -73,12 +72,11 @@
 		EEB532AA292406EA0072CB65 /* WordStructure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordStructure.swift; sourceTree = "<group>"; };
 		EEB532AC292406EA0072CB65 /* Dictonary Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictonary Request.swift"; sourceTree = "<group>"; };
 		EEB532B7292407680072CB65 /* Home VC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Home VC.swift"; sourceTree = "<group>"; };
-		EEB532B8292407680072CB65 /* Select Categorie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Select Categorie.swift"; sourceTree = "<group>"; };
+		EEB532B8292407680072CB65 /* Pin Categorie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Pin Categorie.swift"; sourceTree = "<group>"; };
 		EEB532BA292407680072CB65 /* Words.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Words.swift; sourceTree = "<group>"; };
 		EEB532BB292407680072CB65 /* Categories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
 		EEB532BD292407680072CB65 /* Add Word.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Add Word.swift"; sourceTree = "<group>"; };
-		EEB532BE292407680072CB65 /* Add Collection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Add Collection.swift"; sourceTree = "<group>"; };
-		EEB532BF292407680072CB65 /* Sub Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Sub Category.swift"; sourceTree = "<group>"; };
+		EEB532BE292407680072CB65 /* Add Categorie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Add Categorie.swift"; sourceTree = "<group>"; };
 		EEB532C0292407680072CB65 /* Add Multiple Words.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Add Multiple Words.swift"; sourceTree = "<group>"; };
 		EEB532CB292407800072CB65 /* Home.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		EEB532CC292407800072CB65 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
@@ -155,7 +153,6 @@
 				EEB532A0292406EA0072CB65 /* Model */,
 				EEB532C9292407800072CB65 /* View */,
 				EEB532B5292407680072CB65 /* Controller */,
-				EE690DD12924562000E8AD5A /* PurchaseViewController.swift */,
 				EEB53288292403D30072CB65 /* Info.plist */,
 				EEB532B4292407210072CB65 /* Containers */,
 			);
@@ -278,8 +275,8 @@
 		EEB532B5292407680072CB65 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				EE690DD12924562000E8AD5A /* PurchaseViewController.swift */,
 				EEB532B6292407680072CB65 /* Home */,
-				EEB532B9292407680072CB65 /* Lists */,
 				EEB532BC292407680072CB65 /* Add  */,
 			);
 			path = Controller;
@@ -289,26 +286,17 @@
 			isa = PBXGroup;
 			children = (
 				EEB532B7292407680072CB65 /* Home VC.swift */,
-				EEB532B8292407680072CB65 /* Select Categorie.swift */,
+				EEB532B8292407680072CB65 /* Pin Categorie.swift */,
+				EEEB23D82931333900D1C55D /* Lists */,
 			);
 			path = Home;
-			sourceTree = "<group>";
-		};
-		EEB532B9292407680072CB65 /* Lists */ = {
-			isa = PBXGroup;
-			children = (
-				EEB532BA292407680072CB65 /* Words.swift */,
-				EEB532BB292407680072CB65 /* Categories.swift */,
-			);
-			path = Lists;
 			sourceTree = "<group>";
 		};
 		EEB532BC292407680072CB65 /* Add  */ = {
 			isa = PBXGroup;
 			children = (
+				EEB532BE292407680072CB65 /* Add Categorie.swift */,
 				EEB532BD292407680072CB65 /* Add Word.swift */,
-				EEB532BE292407680072CB65 /* Add Collection.swift */,
-				EEB532BF292407680072CB65 /* Sub Category.swift */,
 				EEB532C0292407680072CB65 /* Add Multiple Words.swift */,
 			);
 			path = "Add ";
@@ -342,6 +330,15 @@
 				EEB532E42924079E0072CB65 /* Assets.xcassets */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		EEEB23D82931333900D1C55D /* Lists */ = {
+			isa = PBXGroup;
+			children = (
+				EEB532BB292407680072CB65 /* Categories.swift */,
+				EEB532BA292407680072CB65 /* Words.swift */,
+			);
+			path = Lists;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -473,11 +470,10 @@
 				EEB53293292405790072CB65 /* String Keys.swift in Sources */,
 				EEB53282292403D20072CB65 /* Word_Hoard.xcdatamodeld in Sources */,
 				EEB532E7292410280072CB65 /* UserDefaultManager.swift in Sources */,
-				EEB532C6292407690072CB65 /* Add Collection.swift in Sources */,
-				EEB532C7292407690072CB65 /* Sub Category.swift in Sources */,
+				EEB532C6292407690072CB65 /* Add Categorie.swift in Sources */,
 				EEB532C4292407680072CB65 /* Categories.swift in Sources */,
 				EEB532B2292406EA0072CB65 /* WordStructure.swift in Sources */,
-				EEB532C2292407680072CB65 /* Select Categorie.swift in Sources */,
+				EEB532C2292407680072CB65 /* Pin Categorie.swift in Sources */,
 				EEB532B3292406EA0072CB65 /* Dictonary Request.swift in Sources */,
 				EE419F84292EE6B300D64C20 /* Other.swift in Sources */,
 				EEB532DA292407800072CB65 /* Word.swift in Sources */,
